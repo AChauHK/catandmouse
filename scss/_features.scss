@@ -1,0 +1,161 @@
+// Styling for the features section
+section.features {
+    padding: 50px 0;
+
+    .row {
+        margin: 0;
+        width: 100%;
+        padding-left: 0;
+        list-style: none;
+
+        .steps {
+            display: inline-block;
+            min-height: 124px;
+
+
+            .pink-tag {
+                background-image: url(../img/pink-tag.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                padding: 20px 20px 60px 30px;
+                width: 50%;
+                float: left;
+                margin-right: 20px;
+            }
+
+            .next-to-flag {
+                padding: 24px 0;
+            }
+
+            h2 {
+                margin-top: 0;
+                font-size: 30px;
+                color: #fff;
+            }
+
+            h5 {
+                text-transform: uppercase;
+                text-align: left;
+            }
+
+            p {
+                margin-bottom: 0;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .device-row {
+        margin-top: 50px;
+
+        .col-lg-6 {
+            margin: 50px auto;
+
+            .devices-container {
+
+                img.devices {
+                    max-width: 400px;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+        }
+    }
+
+
+    .join-button {
+        font-size: 26px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        margin: 30px auto;
+        display: block;
+        max-width: 400px;
+        border: none;
+    }
+
+    h3 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    section.feature {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+        text-align: center;
+
+
+        i {
+            font-size: 80px;
+            display: block;
+            margin-bottom: 15px;
+            background: -webkit-linear-gradient(to left, $theme-secondary, $theme-tertiary);
+            background: linear-gradient(to left, $theme-secondary, $theme-tertiary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    @media(max-width: 1000px) {
+        ul {
+            @include display-flex;
+            @include flex-direction-column;
+
+            li {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    @media(max-width: 700px) {
+        .device-row {
+            display: none;
+        }
+    }
+
+    @media (max-width: 500px) {
+
+        .devices-container {
+            img {
+                width: 350px !important;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+
+    @media (max-width: 400px) {
+
+        .row {
+            .steps {
+                .pink-tag {
+                    padding: 35px 20px 60px 30px;
+                }
+
+                .next-to-flag {
+                    padding: 40px 0;
+                }
+            }
+        }
+
+        .devices-container {
+            img {
+                width: 300px !important;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+
+    @media (max-width: 350px) {
+
+        .devices-container {
+            img {
+                width: 200px !important;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+}

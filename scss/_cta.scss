@@ -1,0 +1,52 @@
+// Styling for the call to action section
+section.cta {
+    position: relative;
+    padding: 20px 0;
+    background-color: #FAA31B;
+
+    .cta-content {
+        position: relative;
+        z-index: 1;
+
+        .container {
+
+
+            .winning-name {
+                text-align: center;
+
+                h5 {
+                    font-family: 'Luckiest Guy', cursive;
+                    font-size: 30px;
+                }
+            }
+
+            h2 {
+                font-size: 50px;
+                max-width: 450px;
+                margin-top: 0;
+                margin-bottom: 25px;
+                color: white;
+            }
+
+            @media (min-width: 768px) {
+                h2 {
+                    font-size: 80px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+
+        .container {
+            max-width: 1300px;
+        }
+    }
+    /* IE10+ CSS styles */
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            .cta-content {
+                display: none;
+            }
+    }
+    /* IE10+ CSS styles */
+}

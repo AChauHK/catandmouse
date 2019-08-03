@@ -1,0 +1,101 @@
+// Mixins
+@mixin transition-all() {
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+@mixin background-cover() {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@mixin display-flex() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flex-direction-column() {
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+}
+
+@mixin green-button-background() {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#318807+0,036b1f+68 */
+    background: #318807; /* Old browsers */
+    background: -moz-linear-gradient(top, #318807 0%, #036b1f 68%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #318807 0%,#036b1f 68%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #318807 0%,#036b1f 68%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#318807', endColorstr='#036b1f',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin button-variant($color, $background, $border) {
+    color: $color;
+    border-color: $border;
+    background-color: $background;
+    &:focus,
+    &.focus {
+        color: $color;
+        border-color: darken($border, 25%);
+        background-color: darken($background, 10%);
+    }
+    &:hover {
+        color: $color;
+        border-color: darken($border, 12%);
+        background-color: darken($background, 10%);
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        color: $color;
+        border-color: darken($border, 12%);
+        background-color: darken($background, 10%);
+        &:hover,
+        &:focus,
+        &.focus {
+            color: $color;
+            border-color: darken($border, 25%);
+            background-color: darken($background, 17%);
+        }
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &:hover,
+        &:focus,
+        &.focus {
+            border-color: $border;
+            background-color: $background;
+        }
+    }
+    .badge {
+        color: $background;
+        background-color: $color;
+    }
+}
+
+@mixin heading-font {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+@mixin body-font {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+@mixin alt-font {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

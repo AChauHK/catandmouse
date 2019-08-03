@@ -1,0 +1,256 @@
+// Global styling for this template
+html,
+body {
+    width: 100%;
+    height: 100%;
+    header {
+        .row {
+            margin-left:0;
+            margin-right: 0;
+        }
+    }
+}
+
+body {
+    @include body-font;
+}
+
+a {
+    color: $theme-primary;
+    @include transition-all;
+    &:hover,
+    &:focus {
+        color: darken($theme-primary, 10%);
+    }
+}
+
+hr {
+    max-width: 100px;
+    margin: 25px auto 0;
+    border-width: 1px;
+    border-color: fade-out($gray-darker, .9);
+}
+
+.center {
+    margin:0 auto;
+}
+
+hr.light {
+    border-color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include heading-font;
+    text-align: center;
+}
+
+h1 {
+    font-size: 135px;
+    font-weight: 900;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+section {
+    padding: 100px 0;
+    h2 {
+        font-size: 50px;
+    }
+}
+
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 -10px rgba(242, 201, 0, 1);
+    }
+
+    40% {
+        box-shadow: 0 0 30px rgba(242, 201, 0, 0.7);
+    }
+
+    60% {
+        box-shadow: 0 0 40px rgba(242, 201, 0, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 -10px rgba(242, 201, 0, 1);
+    }
+}
+
+.grow-button {
+    overflow: hidden;
+}
+
+.grow-button {
+    animation: glowing 4000ms infinite;
+}
+
+.grow-button:hover {
+    box-shadow: -15px 0 30px rgba(225, 225, 225, 0.4), 15px 0 30px rgba(225, 225, 225, 0.3);
+    text-shadow: 0 0 10px rgba(225,225,225,0.30), 0 0 25px rgba(225,225,225,0.30), 0 0 35px rgba(225,225,225,0.30);
+}
+
+.grow-button:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    background-color: rgba(88, 255, 61, 0);
+    filter: blur(4px);
+    transition: 2s;
+}
+
+.grow-button:hover:before {
+    background-color: rgba(225,225,225,0.20);
+    transform: scaleX(7);
+}
+
+.grow-button:after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 0;
+    right: 0;
+    border-radius: 50px;
+    background-color: rgba(255, 231, 160, 0);
+    filter: blur(4px);
+    transition: 2s;
+    mix-blend-mode: lighten;
+}
+
+.grow-button:hover:after {
+    background-color: rgba(255, 231, 160, 0.2);
+    transform: scaleX(5);
+}
+
+/* IE10+ CSS styles */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .grow-button:hover:after,
+    .grow-button:hover:before {
+        display: none;
+    }
+}
+/* IE10+ CSS styles */
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex-wrap-wrap {
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.flex-flow-row-wrap {
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+.flex-flow-row-wrap-reverse {
+    -ms-flex-flow: row wrap-reverse;
+    -webkit-flex-flow: row wrap-reverse;
+    flex-flow: row wrap-reverse;
+}
+
+.flex-align-self-flex-start {
+    -ms-align-self: flex-start;
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+}
+
+.flex-align-self-flex-end {
+    -ms-align-self: flex-end;
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+}
+
+.flex-align-items-center {
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.flex-justify-content-center {
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.flex-justify-content-space-between {
+    -webkit-box-pack: space-between;
+    -moz-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.flex-justify-content-flex-end {
+    -webkit-box-pack: flex-end;
+    -moz-box-pack: flex-end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+.flex-direction-column {
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex-direction-row {
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.flex-0 {
+    -ms-flex: 0;
+    -webkit-flex: 0;
+    flex: 0;
+}
+
+.flex-1 {
+    -ms-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.flex-2 {
+    -ms-flex: 2;
+    -webkit-flex: 2;
+    flex: 2;
+}
+
+.flex-order-1 {
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+}
+
+.flex-order-2 {
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+}

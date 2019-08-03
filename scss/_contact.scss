@@ -1,0 +1,138 @@
+// Styling for the download section
+section.contact {
+    text-align: center;
+    padding: 50px 0;
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 25px;
+
+        i {
+            color: $brand-google-plus;
+        }
+    }
+
+    h5 {
+        color: #fff;
+        margin-bottom: 40px;
+    }
+
+    ul.list-games {
+        max-width: 1500px;
+        width: 100%;
+
+        .game-1 {
+            background-image: url(../img/image-2.png);
+        }
+
+        .game-2 {
+            background-image: url(../img/image-9.png);
+        }
+
+        .game-3 {
+            background-image: url(../img/image-4.png);
+        }
+
+        .game-4 {
+            background-image: url(../img/image-5.png);
+        }
+
+        .game-5 {
+            background-image: url(../img/image-8.png);
+        }
+
+        .game-6 {
+            background-image: url(../img/image-7.png);
+        }
+
+        .list-inline-item {
+            background-size: contain;
+            width: 182px;
+            height: 227px;
+            margin: 10px auto;
+
+
+
+            h6 {
+                background-color: #353D6C;
+                padding: 10px;
+                color: #fff;
+                margin: 10px;
+                border-radius: 5px;
+                text-align: left;
+                width: auto;
+                display: inline-block;
+            }
+
+            p {
+                margin: auto;
+            }
+
+            img {
+                margin: auto;
+            }
+
+            .jackpot {
+                background-color: rgba(43, 43, 43, 0.85);
+                color: #fff;
+            }
+        }
+    }
+
+    .row {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+
+        h3 {
+            color: #fff;
+            margin: 0 auto;
+        }
+
+        a {
+            font-size: 30px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            width: 100%;
+            max-width: 300px;
+            border: none;
+            margin: 30px auto 0;
+        }
+    }
+
+    .row-cta {
+        margin-top: 50px;
+    }
+
+    @media (max-width: 1200px) {
+        ul.list-games {
+            .list-inline-item {
+                margin: 10px;
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 1500px;
+        }
+    }
+    /* IE10+ CSS styles */
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        ul {
+            display: block;
+            min-height: 277px;
+            max-width: 1215px !important;
+            margin: 0 auto !important;
+            clear: both;
+
+
+            li.list-inline-item {
+                float: left;
+                margin-right: 20px !important;
+            }
+        }
+    }
+    /* IE10+ CSS styles */
+}
+
